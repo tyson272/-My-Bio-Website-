@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavann's Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    const name = form.querySelector("input[placeholder='Your Name']").value;
+    const email = form.querySelector("input[placeholder='Your Email']").value;
+    const message = form.querySelector("textarea").value;
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields ✍️");
+      return;
+    }
+
+    alert("Thank you, Pavann! Your message was sent 💌");
+    form.reset(); // Clears form fields
+  });
+</script>
+
+<body>
+     <div>
+        <img src="https://i.postimg.cc/Kjz2qJ9C/IMG-20241028-082707-704.webp/150" alt="Profile Photo" width="150">
+        <h1><i>PAVAN KUMAR </i></h1>
+        <p>Hi! I'm a student who loves learning new things, especially web development. I'm excited to build my own websites and become a great developer one day!</p>
+        <h2>My Favorite Websites</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/pavan_kr7_/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/pavankumar.kakarla.773" target="_blank">Facebook</a></li>
+            <li><a href="https://www.battlegroundsmobileindia.com/" target="_blank">BGMI</a></li>
+        </ul>
+         <h2>Contact Me</h2>
+<form id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="email" id="email" placeholder="Your Email" required />
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<p id="responseMsg"></p>
+
+
+        
+         
+
+  
+
+
+     </div>
+      <a href="https://wa.me/917013492789" target="_blank" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+        Chat on WhatsApp
+     </a>
+
+     <h2>My Gallery</h2>
+     <div class="gallery">
+       <img src="https://ik.imagekit.io/pavankumar/Mee/WhatsApp%20Image%202025-07-22%20at%2021.29.06_36d8a7f9.jpg?updatedAt=1753200291508/150" alt="Photo 1">
+       <img src="https://ik.imagekit.io/pavankumar/Mee/WhatsApp%20Image%202025-07-22%20at%2021.29.06_1aa672b3.jpg?updatedAt=1753200291507/150" alt="Photo 2">
+       <img src="https://ik.imagekit.io/pavankumar/1730023636779.jpg?updatedAt=1753200304915/150" alt="Photo 3">
+     </div>
+     <script src="js/formValidation.js"></script>
+     <script src="script.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script>
+  const form = document.getElementById('contactForm');
+  const responseMsg = document.getElementById('responseMsg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    };
+
+    try {
+      const res = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.text();
+      responseMsg.textContent = result;
+    } catch (err) {
+      responseMsg.textContent = 'Error sending message.';
+      console.error(err);
+    }
+  });
+</script>
+
+
+
+
+
+
+     
+
+</body>
+</html>

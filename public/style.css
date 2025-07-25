@@ -1,0 +1,210 @@
+ body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+img {
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #0077cc;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+@keyframes glow {
+  from { color: #0d47a1; }
+  to { color: #1976d2; text-shadow: 0 0 10px #64b5f6; }
+}
+body {
+  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+a:hover {
+  color: #ff4081;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+img:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
+form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #2196f3;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+input:focus, textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px #64b5f6;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Light mode - default */
+body {
+  background-color: #e6f9ff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Inputs and textareas in dark mode */
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+/* Button styling */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+/* Responsive container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Responsive form */
+input, textarea {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Make heading and paragraphs fit small screens */
+h1, h2, p {
+  text-align: center;
+  word-wrap: break-word;
+  padding: 5px;
+}
+
+/* Favorite links */
+a {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* WhatsApp Button – fixed position on mobile */
+#whatsappBtn {
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+}
+
+
+

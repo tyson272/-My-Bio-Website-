@@ -1,0 +1,27 @@
+{
+  "name": "bio-pic",
+  "version": "1.0.0",
+  "main": "formValidation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyson272/my-fullstack-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyson272/my-fullstack-website/issues"
+  },
+  "homepage": "https://github.com/tyson272/my-fullstack-website#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
+"dependencies": {
+  "express": "^4.18.2"
+}
